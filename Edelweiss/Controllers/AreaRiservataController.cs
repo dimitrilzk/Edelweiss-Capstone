@@ -6,12 +6,12 @@ using System.Web.Mvc;
 
 namespace Edelweiss.Controllers
 {
-    public class HomeController : Controller
+    public class AreaRiservataController : Controller
     {
+        // GET: AreaRiservata
         public ActionResult Index()
         {
             return View();
         }
-
     }
 }

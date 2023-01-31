@@ -129,6 +129,9 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AreaRiservataController.cs" />
+    <Compile Include="Controllers\CollaboratoriController.cs" />
+    <Compile Include="Controllers\ContattiController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -216,12 +219,22 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\AreaRiservata\Index.cshtml" />
+    <Content Include="Views\Contatti\Create.cshtml" />
+    <Content Include="Views\Contatti\Delete.cshtml" />
+    <Content Include="Views\Contatti\Details.cshtml" />
+    <Content Include="Views\Contatti\Edit.cshtml" />
+    <Content Include="Views\Contatti\Index.cshtml" />
+    <Content Include="Views\Collaboratori\Create.cshtml" />
+    <Content Include="Views\Collaboratori\Delete.cshtml" />
+    <Content Include="Views\Collaboratori\Details.cshtml" />
+    <Content Include="Views\Collaboratori\Edit.cshtml" />
+    <Content Include="Views\Collaboratori\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\Assets\Img\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

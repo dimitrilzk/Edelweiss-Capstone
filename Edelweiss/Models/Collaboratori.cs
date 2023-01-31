@@ -5,6 +5,7 @@ namespace Edelweiss.Models
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using System.Web;
 
     [Table("Collaboratori")]
     public partial class Collaboratori
@@ -34,5 +35,8 @@ namespace Edelweiss.Models
         [Required]
         [StringLength(50)]
         public string Foto { get; set; }
+        [NotMapped]
+        [Required]
+        public HttpPostedFileBase FileFoto { get; set; }
     }
 }
