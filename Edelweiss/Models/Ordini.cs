@@ -45,7 +45,6 @@ namespace Edelweiss.Models
         [Column(TypeName = "money")]
         public decimal PrezzoAcquisto { get; set; }
 
-        //[Required]
         [StringLength(50)]
         public string NomePacchetto { get; set; }
 

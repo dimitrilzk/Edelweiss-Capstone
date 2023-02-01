@@ -1,0 +1,53 @@
+﻿@model IEnumerable<Edelweiss.Models.Pacchetti>
+
+@{
+    ViewBag.Title = "PacchettiPublic";
+}
+
+<h2 class="text-center">I nostri pacchetti</h2>
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-4">
+            <div class="card" style="width: 18rem; height: 25rem;">
+                <div class="card-body my-3">
+                    <h5 class="card-subtitle mb-2 text-muted text-decoration-line-through text-end">@Html.DisplayFor(modelItem => item.PrezzoScontato)</h5>
+                    <h2 class="card-text text-end text-center">@Html.DisplayFor(modelItem => item.PrezzoEffettivo)</h2>
+                    <p class="card-text text-end text-muted">@Html.DisplayFor(modelItem => item.Descrizione)</p>
+                    <h1 class="card-title text-center text-uppercase my-5">@Html.DisplayFor(modelItem => item.Nome)</h1>
+                    <p class="btn btn-dark d-flex justify-content-center">
+                        @Html.ActionLink("Aggiungi al Carrello", "Edit", new { id = item.IdPacchetto })
+                    </p>
+                    <p class="btn btn-dark d-flex justify-content-center">
+                        @Html.ActionLink("Dettagli", "Details", new { id = item.IdPacchetto })
+                    </p>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+@*@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PrezzoScontato)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PrezzoEffettivo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descrizione)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nome)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IdPacchetto }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IdPacchetto }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IdPacchetto })
+        </td>
+    </tr>
+}*@
+
+

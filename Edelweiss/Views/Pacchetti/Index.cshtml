@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Edelweiss.Models.Pacchetti>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PrezzoScontato)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PrezzoEffettivo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Descrizione)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nome)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PrezzoScontato)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PrezzoEffettivo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descrizione)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nome)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IdPacchetto }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IdPacchetto }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IdPacchetto })
+        </td>
+    </tr>
+}
+
+</table>
