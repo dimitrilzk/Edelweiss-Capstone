@@ -1,0 +1,104 @@
+﻿@model Edelweiss.Models.Ordini
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Ordini</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Pacchetti.Descrizione)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pacchetti.Descrizione)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cognome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cognome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cellulare)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cellulare)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumeroCarta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumeroCarta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Scadenza)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Scadenza)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CodiceCVV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CodiceCVV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrezzoAcquisto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrezzoAcquisto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NomePacchetto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomePacchetto)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

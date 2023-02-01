@@ -133,6 +133,7 @@
     <Compile Include="Controllers\CollaboratoriController.cs" />
     <Compile Include="Controllers\ContattiController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\OrdiniController.cs" />
     <Compile Include="Controllers\PacchettiController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -242,6 +243,11 @@
     <Content Include="Views\Pacchetti\Edit.cshtml" />
     <Content Include="Views\Pacchetti\Index.cshtml" />
     <Content Include="Views\Pacchetti\PacchettiPublic.cshtml" />
+    <Content Include="Views\Ordini\Create.cshtml" />
+    <Content Include="Views\Ordini\Delete.cshtml" />
+    <Content Include="Views\Ordini\Details.cshtml" />
+    <Content Include="Views\Ordini\Edit.cshtml" />
+    <Content Include="Views\Ordini\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

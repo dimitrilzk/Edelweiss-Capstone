@@ -1,0 +1,87 @@
+﻿@model IEnumerable<Edelweiss.Models.Ordini>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Pacchetti.Descrizione)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cognome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cellulare)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumeroCarta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Scadenza)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CodiceCVV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PrezzoAcquisto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NomePacchetto)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Pacchetti.Descrizione)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cognome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cellulare)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumeroCarta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Scadenza)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CodiceCVV)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PrezzoAcquisto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NomePacchetto)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IdOrdine }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IdOrdine }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IdOrdine })
+        </td>
+    </tr>
+}
+
+</table>
