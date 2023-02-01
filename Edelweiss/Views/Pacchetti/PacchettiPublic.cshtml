@@ -10,7 +10,7 @@
     @foreach (var item in Model)
     {
         <div class="col-4">
-            <div class="card" style="width: 18rem; height: 25rem;">
+            <div class="card pack" style="width: 18rem; height: 25rem;">
                 <div class="card-body my-3">
                     <h5 class="card-subtitle mb-2 text-muted text-decoration-line-through text-end">@Html.DisplayFor(modelItem => item.PrezzoScontato)</h5>
                     <h2 class="card-text text-end text-center">@Html.DisplayFor(modelItem => item.PrezzoEffettivo)</h2>
@@ -27,6 +27,14 @@
         </div>
     }
 </div>
+
+<script>
+    $("body").find(".pack").eq(0).addClass("blue");
+    $("body").find(".pack").eq(1).addClass("red");
+    $("body").find(".pack").eq(2).addClass("yellow");
+</script>
+
+
 
 @*@foreach (var item in Model) {
     <tr>
