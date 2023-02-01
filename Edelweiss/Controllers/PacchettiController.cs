@@ -21,9 +21,10 @@ namespace Edelweiss.Controllers
             p1.Nome = db.Pacchetti.Find(id).Nome;
             p1.Prezzo = db.Pacchetti.Find(id).PrezzoEffettivo;
             p1.DataAcquisto = DateTime.Now;
+            PacchettoAcquistato.ListaPacchetti.Add(p1);
             TempData["riepilogo"] = $"Hai scelto il pacchetto: {p1.Nome} al prezzo di: {p1.Prezzo.ToString("c2")}, per confermare" +
                 $" il tuo ordine compila i campi qui sotto.";
-            return RedirectToAction("Create", "Ordini", p1);
+            return RedirectToAction("Create", "Ordini");
         }
         public ActionResult PacchettiPublic()
         {

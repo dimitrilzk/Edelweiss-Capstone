@@ -11,5 +11,6 @@ namespace Edelweiss.Models
         public  string Nome;
         public  decimal Prezzo;
         public  DateTime DataAcquisto;
+        public static List<PacchettoAcquistato> ListaPacchetti = new List<PacchettoAcquistato>();
     }
 }

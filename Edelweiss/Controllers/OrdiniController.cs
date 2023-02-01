@@ -38,10 +38,9 @@ namespace Edelweiss.Controllers
         }
 
         // GET: Ordini/Create
-        public ActionResult Create(PacchettoAcquistato p1)
+        public ActionResult Create()
         {
             ViewBag.IdPacchetto = new SelectList(db.Pacchetti, "IdPacchetto", "Nome");
-            ViewBag.Prezzo = (db.Pacchetti, "IdPacchetto", "PrezzoEffettivo");
             return View();
         }
 
@@ -50,10 +49,12 @@ namespace Edelweiss.Controllers
         // Per altri dettagli, vedere https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "IdOrdine,Nome,Cognome,Email,Cellulare,NumeroCarta,Scadenza,CodiceCVV,IdPacchetto,PrezzoAcquisto,NomePacchetto")] Ordini ordini)
+        public ActionResult Create([Bind(Include = "IdOrdine,Nome,Cognome,Email,Cellulare,NumeroCarta,Scadenza,CodiceCVV,IdPacchetto")] Ordini ordini)
         {
             if (ModelState.IsValid)
             {
+                ordini.PrezzoAcquisto = PacchettoAcquistato.ListaPacchetti[0].Prezzo;
+                ordini.NomePacchetto = PacchettoAcquistato.ListaPacchetti[0].Nome;
                 db.Ordini.Add(ordini);
                 db.SaveChanges();
                 return RedirectToAction("Index");
