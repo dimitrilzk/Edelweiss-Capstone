@@ -140,6 +140,10 @@
     <Compile Include="Migrations\202301301730173_InitialCreate.designer.cs">
       <DependentUpon>202301301730173_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202302010836291_RemoveRequiredFoto.cs" />
+    <Compile Include="Migrations\202302010836291_RemoveRequiredFoto.designer.cs">
+      <DependentUpon>202302010836291_RemoveRequiredFoto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Collaboratori.cs" />
     <Compile Include="Models\Contatti.cs" />
@@ -244,6 +248,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202301301730173_InitialCreate.resx">
       <DependentUpon>202301301730173_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302010836291_RemoveRequiredFoto.resx">
+      <DependentUpon>202302010836291_RemoveRequiredFoto.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

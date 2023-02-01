@@ -32,7 +32,7 @@ namespace Edelweiss.Models
         [StringLength(50)]
         public string Email { get; set; }
 
-        [Required]
+        //[Required]
         [StringLength(50)]
         public string Foto { get; set; }
         [NotMapped()]

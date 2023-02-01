@@ -46,9 +46,9 @@ namespace Edelweiss.Controllers
         // Per altri dettagli, vedere https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "IdCollaboratore,Nome,Cognome,Mansione,Cellulare,Email,Foto")] Collaboratori collaboratori)
+        public ActionResult Create(Collaboratori collaboratori)
         {
-            if (ModelState.IsValid == false)
+            if (ModelState.IsValid)
             {
                 string path = Server.MapPath("~/Content/Assets/Img/" + collaboratori.FileFoto.FileName);
                 collaboratori.FileFoto.SaveAs(path);
@@ -84,7 +84,7 @@ namespace Edelweiss.Controllers
         //[Bind(Include = "IdCollaboratore,Nome,Cognome,Mansione,Cellulare,Email,Foto")]
         public ActionResult Edit(Collaboratori collaboratori)
         {
-            if (ModelState.IsValid == false && collaboratori.FileFoto != null)
+            if (ModelState.IsValid == true && collaboratori.FileFoto != null)
             {
                 string path = Server.MapPath("~/Content/Assets/Img/" + collaboratori.FileFoto.FileName);
                 collaboratori.FileFoto.SaveAs(path);
@@ -92,7 +92,7 @@ namespace Edelweiss.Controllers
                 db.Entry(collaboratori).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
-            }else if(ModelState.IsValid == false)
+            }else if(ModelState.IsValid)
             {
                 Collaboratori collaboratoreDB = db.Collaboratori.Find(collaboratori.IdCollaboratore);
                 collaboratoreDB.Nome = collaboratori.Nome;
@@ -100,7 +100,7 @@ namespace Edelweiss.Controllers
                 collaboratoreDB.Mansione = collaboratori.Mansione;
                 collaboratoreDB.Cellulare = collaboratori.Cellulare;
                 collaboratoreDB.Email = collaboratori.Email;
-                collaboratoreDB.Foto = db.Collaboratori.Find(collaboratori.Foto).Foto;
+                collaboratoreDB.Foto = db.Collaboratori.Find(collaboratori.IdCollaboratore).Foto;
                 db.Entry(collaboratoreDB).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
