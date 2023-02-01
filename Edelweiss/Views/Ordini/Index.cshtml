@@ -3,6 +3,10 @@
 @{
     ViewBag.Title = "Index";
 }
+@if (TempData["riepilogo"] != null)
+            {
+                <p class="text-center mt-3 alert alert-success">@TempData["riepilogo"]</p>
+            }
 
 <h2>Index</h2>
 

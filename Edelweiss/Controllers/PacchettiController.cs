@@ -14,6 +14,17 @@ namespace Edelweiss.Controllers
     {
         private ModelDbContext db = new ModelDbContext();
 
+        public ActionResult AggiungiCarrello(int id)
+        {
+            PacchettoAcquistato p1 = new PacchettoAcquistato();
+            p1.IdPacchetto = id;
+            p1.Nome = db.Pacchetti.Find(id).Nome;
+            p1.Prezzo = db.Pacchetti.Find(id).PrezzoEffettivo;
+            p1.DataAcquisto = DateTime.Now;
+            TempData["riepilogo"] = $"Hai scelto il pacchetto: {p1.Nome} al prezzo di: {p1.Prezzo.ToString("c2")}, per confermare" +
+                $" il tuo ordine compila i campi qui sotto.";
+            return RedirectToAction("Create", "Ordini", p1);
+        }
         public ActionResult PacchettiPublic()
         {
             return View(db.Pacchetti.ToList());

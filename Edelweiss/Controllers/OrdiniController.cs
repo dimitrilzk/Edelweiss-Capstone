@@ -14,6 +14,7 @@ namespace Edelweiss.Controllers
     {
         private ModelDbContext db = new ModelDbContext();
 
+
         // GET: Ordini
         public ActionResult Index()
         {
@@ -37,7 +38,7 @@ namespace Edelweiss.Controllers
         }
 
         // GET: Ordini/Create
-        public ActionResult Create()
+        public ActionResult Create(PacchettoAcquistato p1)
         {
             ViewBag.IdPacchetto = new SelectList(db.Pacchetti, "IdPacchetto", "Nome");
             ViewBag.Prezzo = (db.Pacchetti, "IdPacchetto", "PrezzoEffettivo");

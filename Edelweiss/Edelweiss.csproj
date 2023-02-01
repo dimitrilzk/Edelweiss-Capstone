@@ -152,6 +152,7 @@
     <Compile Include="Models\ModelDbContext.cs" />
     <Compile Include="Models\Ordini.cs" />
     <Compile Include="Models\Pacchetti.cs" />
+    <Compile Include="Models\PacchettoAcquistato.cs" />
     <Compile Include="Models\Utenti.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
