@@ -28,15 +28,15 @@ namespace Edelweiss.Models
         [StringLength(50)]
         public string Cellulare { get; set; }
 
-        [Required]
+        [NotMapped()]
         [StringLength(19)]
         public string NumeroCarta { get; set; }
 
-        [Required]
+        [NotMapped()]
         [StringLength(50)]
         public string Scadenza { get; set; }
 
-        [Required]
+        [NotMapped()]
         [StringLength(3)]
         public string CodiceCVV { get; set; }
 
@@ -47,6 +47,7 @@ namespace Edelweiss.Models
 
         [StringLength(50)]
         public string NomePacchetto { get; set; }
+        public DateTime DataAcquisto { get; set; }
 
         public virtual Pacchetti Pacchetti { get; set; }
     }

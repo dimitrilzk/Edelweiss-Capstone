@@ -18,6 +18,7 @@ namespace Edelweiss.Controllers
         // GET: Ordini
         public ActionResult Index()
         {
+
             var ordini = db.Ordini.Include(o => o.Pacchetti);
             return View(ordini.ToList());
         }
@@ -40,6 +41,8 @@ namespace Edelweiss.Controllers
         // GET: Ordini/Create
         public ActionResult Create()
         {
+            //var idPacchetto = PacchettoAcquistato.ListaPacchetti[0].IdPacchetto;
+            //ViewBag.ConfermaOrdine = $"Stai comprando il pacchetto {PacchettoAcquistato.ListaPacchetti[0].Nome}";
             ViewBag.IdPacchetto = new SelectList(db.Pacchetti, "IdPacchetto", "Nome");
             return View();
         }
@@ -53,11 +56,23 @@ namespace Edelweiss.Controllers
         {
             if (ModelState.IsValid)
             {
-                ordini.PrezzoAcquisto = PacchettoAcquistato.ListaPacchetti[0].Prezzo;
-                ordini.NomePacchetto = PacchettoAcquistato.ListaPacchetti[0].Nome;
-                db.Ordini.Add(ordini);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                if(PacchettoAcquistato.ListaPacchetti.Count == 0)
+                {
+                    ViewBag.errore = "Attenzione, devi prima scegliere il pacchetto che vuoi acquistare";
+                    return View();
+                }
+                else
+                {
+                    ordini.IdPacchetto = PacchettoAcquistato.ListaPacchetti[0].IdPacchetto;
+                    ordini.PrezzoAcquisto = PacchettoAcquistato.ListaPacchetti[0].Prezzo;
+                    ordini.NomePacchetto = PacchettoAcquistato.ListaPacchetti[0].Nome;
+                    ordini.DataAcquisto = PacchettoAcquistato.ListaPacchetti[0].DataAcquisto;
+                    db.Ordini.Add(ordini);
+                    db.SaveChanges();
+                    PacchettoAcquistato.ListaPacchetti.Clear();
+                    return RedirectToAction("Index");
+                }
+                
             }
 
             ViewBag.IdPacchetto = new SelectList(db.Pacchetti, "IdPacchetto", "Nome", ordini.IdPacchetto);

@@ -3,10 +3,6 @@
 @{
     ViewBag.Title = "Index";
 }
-@if (TempData["riepilogo"] != null)
-            {
-                <p class="text-center mt-3 alert alert-success">@TempData["riepilogo"]</p>
-            }
 
 <h2>Index</h2>
 
@@ -15,9 +11,9 @@
 </p>
 <table class="table">
     <tr>
-        <th>
+        @*<th>
             @Html.DisplayNameFor(model => model.Pacchetti.Descrizione)
-        </th>
+        </th>*@
         <th>
             @Html.DisplayNameFor(model => model.Nome)
         </th>
@@ -31,28 +27,22 @@
             @Html.DisplayNameFor(model => model.Cellulare)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.NumeroCarta)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Scadenza)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CodiceCVV)
-        </th>
-        <th>
             @Html.DisplayNameFor(model => model.PrezzoAcquisto)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.NomePacchetto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataAcquisto)
         </th>
         <th></th>
     </tr>
 
 @foreach (var item in Model) {
     <tr>
-        <td>
+        @*<td>
             @Html.DisplayFor(modelItem => item.Pacchetti.Descrizione)
-        </td>
+        </td>*@
         <td>
             @Html.DisplayFor(modelItem => item.Nome)
         </td>
@@ -66,19 +56,13 @@
             @Html.DisplayFor(modelItem => item.Cellulare)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.NumeroCarta)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Scadenza)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CodiceCVV)
-        </td>
-        <td>
             @Html.DisplayFor(modelItem => item.PrezzoAcquisto)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.NomePacchetto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataAcquisto)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.IdOrdine }) |

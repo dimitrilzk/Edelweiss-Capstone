@@ -34,28 +34,3 @@
     $("body").find(".pack").eq(2).addClass("yellow");
 </script>
 
-
-
-@*@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.PrezzoScontato)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PrezzoEffettivo)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Descrizione)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Nome)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.IdPacchetto }) |
-            @Html.ActionLink("Details", "Details", new { id=item.IdPacchetto }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.IdPacchetto })
-        </td>
-    </tr>
-}*@
-
-

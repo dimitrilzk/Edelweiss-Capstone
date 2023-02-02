@@ -146,6 +146,10 @@
     <Compile Include="Migrations\202302010836291_RemoveRequiredFoto.designer.cs">
       <DependentUpon>202302010836291_RemoveRequiredFoto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202302020847016_NotMappedCartaOrdini.cs" />
+    <Compile Include="Migrations\202302020847016_NotMappedCartaOrdini.designer.cs">
+      <DependentUpon>202302020847016_NotMappedCartaOrdini.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Collaboratori.cs" />
     <Compile Include="Models\Contatti.cs" />
@@ -265,6 +269,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202302010836291_RemoveRequiredFoto.resx">
       <DependentUpon>202302010836291_RemoveRequiredFoto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302020847016_NotMappedCartaOrdini.resx">
+      <DependentUpon>202302020847016_NotMappedCartaOrdini.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
