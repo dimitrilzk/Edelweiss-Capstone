@@ -1,12 +1,15 @@
 ﻿body {
-/*    padding-top: 50px;
+    /*    padding-top: 50px;
     padding-bottom: 20px;*/
+    background: linear-gradient(187deg, rgba(162,144,125,1) 0%, rgba(253,244,227,1) 73%);
+    /*    height: 100vh;*/
 }
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 0px;
     padding-right: 0px;
+    height: 100vh;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -28,12 +31,45 @@ textarea {
     background-color: #777;
     border-color: #fff
 }
-.blue{
-    background-color: blue;
+footer div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-block: 10px;
 }
-.red{
-    background-color: red
+
+.ebony {
+    background-color: #3c3431;
 }
-.yellow{
-    background-color: yellow
+
+.sage {
+    background-color: #c1c2ad;
 }
+
+.khaki {
+    background-color: #a8907d;
+}
+
+.cream {
+    background-color: #f0e1ca;
+}
+
+.peach {
+    background-color: #fdf4e3;
+}
+
+.cream2 {
+    color: #f0e1ca;
+}
+
+.navbar-nav li a {
+    color: #f0e1ca;
+    margin-inline: 10px;
+}
+    /*.navbar-nav li a:focus*/
+    .navbar-nav li a:hover {
+        color: #a8907d;
+        border: 1px solid #c1c2ad;
+        border-radius: 20px;
+        background-color: #c1c2ad;
+    }
