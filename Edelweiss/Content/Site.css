@@ -61,6 +61,7 @@ footer div {
 .navbar-nav li a {
     color: #f0e1ca;
     margin-inline: 10px;
+    font-size: 18px;
 }
     /*.navbar-nav li a:focus*/
     .navbar-nav li a:hover {
