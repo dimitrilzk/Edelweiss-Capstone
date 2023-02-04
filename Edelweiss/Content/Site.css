@@ -58,10 +58,6 @@ footer div {
     background-color: #fdf4e3;
 }
 
-.cream2 {
-    color: #f0e1ca;
-}
-
 .navbar-nav li a {
     color: #f0e1ca;
     margin-inline: 10px;
@@ -69,7 +65,9 @@ footer div {
     /*.navbar-nav li a:focus*/
     .navbar-nav li a:hover {
         color: #a8907d;
-        border: 1px solid #c1c2ad;
-        border-radius: 20px;
-        background-color: #c1c2ad;
+/*        border-radius: 20px;*/
+        background-color: #3c3431;
+    }
+    .navbar-nav li a:focus{
+        border-bottom: 5px solid #3c3431
     }

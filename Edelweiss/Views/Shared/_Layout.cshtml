@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Applicazione ASP.NET</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     @Scripts.Render("~/bundles/jquery")
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
@@ -21,22 +22,22 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link peach2" href="/Home/Index">Home</a>
+                        <a class="nav-link navbar-brand" href="/Home/Index">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">ChiSiamo</a>
+                        <a class="nav-link navbar-brand" href="#">Chi Siamo</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Servizi</a>
+                        <a class="nav-link navbar-brand" href="#">Servizi</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/Pacchetti/PacchettiPublic">Pacchetti</a>
+                        <a class="nav-link navbar-brand" href="/Pacchetti/PacchettiPublic">Pacchetti</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/Contatti/Create">Contatti</a>
+                        <a class="nav-link navbar-brand" href="/Contatti/Create">Contatti</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/Ordini/Create">Carrello</a>
+                        <a class="nav-link navbar-brand" href="/Ordini/Create"><i class="bi bi-cart-plus"></i></a>
                     </li>
                 </ul>
             </div>
