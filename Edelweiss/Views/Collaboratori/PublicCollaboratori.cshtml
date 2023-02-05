@@ -1,0 +1,62 @@
+﻿@model IEnumerable<Edelweiss.Models.Collaboratori>
+
+@{
+    ViewBag.Title = "PublicCollaboratori";
+}
+
+<h2 class="my-4 text-decoration-underline fw-bold">Cos'è Edelweiss.BeDifferent?</h2>
+<p class="my-3 fs-5">
+    Edelweiss.BeDifferent è una Inbound Marketing Agency nata con l'obiettivo, di analizzare il potenziale delle strutture
+    ricettive nelle zone di montagna meno conosciute, ed instaurare con esse un rapporto di collaborazione per farle
+    crescere attraverso l'inbound marketing.
+</p>
+<p class="my-3 fs-5">
+    In questo modo finalmente anche queste realtà potranno farsi conoscere e dare una nuova influenza positiva ai
+    paesi che le accolgono, portando benefici anche al territorio e alle attività locali.
+</p>
+<h2 class="my-4 text-decoration-underline fw-bold">A chi ci rivolgiamo?</h2>
+<p class="my-3 fs-5">
+    Ci rivolgiamo principalmente a strutture ricettive di montagna quindi Hotel, B&B, appartamenti per uso turistico,
+    baite, chalet ecc.
+</p>
+<h2 class="my-4 text-decoration-underline fw-bold">Perchè affidare a noi lo sviluppo della tua struttura?</h2>
+<p class="my-3 fs-5">
+    Perchè il nostro obiettivo di rendere la montagna un ambiente di qualità , parte dal nostro cuore.
+    La passione per la montagna è una caratteristica che fa parte di tutte le persone del nostro team.
+    Solo chi percepisce il vero valore di qualcosa riuscirà a promuoverla con passione e con risultati di successo. Se per
+    esempio ti affidassi a una qualsiasi altra agenzia e chi gestirà il progetto della tua attività fosse un amante del mare
+    che non è mai stato in montagna, come credi che potrebbe portare al successo la tua attività? Pensaci senza fretta,
+    noi siamo qui ad aspettarti.
+</p>
+
+
+
+<table class="table">
+    <tr>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cognome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mansione)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cellulare)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                <img src="~/Content/Assets/Img/@Html.DisplayFor(modelItem => item.Foto)" width="40" />
+            </td>
+        </tr>
+    }
+
+</table>

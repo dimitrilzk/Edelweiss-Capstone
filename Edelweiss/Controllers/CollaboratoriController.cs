@@ -14,6 +14,11 @@ namespace Edelweiss.Controllers
     {
         private ModelDbContext db = new ModelDbContext();
 
+        public ActionResult PublicCollaboratori()
+        {
+            return View(db.Collaboratori.ToList());
+        }
+
         // GET: Collaboratori
         public ActionResult Index()
         {

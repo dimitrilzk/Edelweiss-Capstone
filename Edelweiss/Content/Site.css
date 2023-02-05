@@ -9,7 +9,7 @@
 .body-content {
     padding-left: 0px;
     padding-right: 0px;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -62,11 +62,11 @@ footer div {
     color: #f0e1ca;
     margin-inline: 10px;
     font-size: 18px;
+/*    overflow: hidden;*/
 }
-    /*.navbar-nav li a:focus*/
     .navbar-nav li a:hover {
         color: #a8907d;
-/*        border-radius: 20px;*/
+/*      border-radius: 20px;*/
         background-color: #3c3431;
     }
     .navbar-nav li a:focus{
