@@ -29,34 +29,19 @@
     noi siamo qui ad aspettarti.
 </p>
 
-
-
-<table class="table">
-    <tr>
-    </tr>
-
+<div class="row">
     @foreach (var item in Model)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nome)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Cognome)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Mansione)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Cellulare)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Email)
-            </td>
-            <td>
-                <img src="~/Content/Assets/Img/@Html.DisplayFor(modelItem => item.Foto)" width="40" />
-            </td>
-        </tr>
-    }
-
-</table>
+            {
+                <div class="col-md-3  d-flex justify-content-center my-3">
+                    <div class="card bg-transparent border-0" style="width: 18rem;">
+                        <img src="~/Content/Assets/Img/@Html.DisplayFor(modelItem => item.Foto)" class="card-img-top">
+                        <div class="card-body">
+                            <h4 class="text-center">@Html.DisplayFor(modelItem => item.Nome) @Html.DisplayFor(modelItem => item.Cognome)</h4>
+                            <h5 class="col-md-12 text-truncate text-center">@Html.DisplayFor(modelItem => item.Mansione)</h5>
+                            <h6 class="text-center"><i class="bi bi-telephone-fill"></i> @Html.DisplayFor(modelItem => item.Cellulare)</h6>
+                            <h6 class="text-center"><i class="bi bi-envelope-at-fill"></i> @Html.DisplayFor(modelItem => item.Email)</h6>
+                        </div>
+                    </div>
+                </div>
+            }
+    </div>
