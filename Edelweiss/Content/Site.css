@@ -72,14 +72,9 @@ footer div {
     .navbar-nav li a:focus{
         border-bottom: 5px solid #3c3431
     }
-/*.identity {
-    right: 680px;
-    top: 60px;
-}
-*/
 .serv {
     border: 1px solid #3c3431;
     background-color: #c1c2ad;
-    border-radius: 80px;
+    border-radius: 50px;
     box-shadow: 0px 15px 16px 8px rgba(60,52,49,0.7);
 }

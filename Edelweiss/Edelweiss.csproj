@@ -168,6 +168,7 @@
     <Content Include="Content\Assets\Img\log.png" />
     <Content Include="Content\Assets\Img\maria.png" />
     <Content Include="Content\Assets\Img\romeo.png" />
+    <Content Include="Content\Assets\Img\video.png" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
