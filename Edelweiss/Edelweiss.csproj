@@ -135,6 +135,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\OrdiniController.cs" />
     <Compile Include="Controllers\PacchettiController.cs" />
+    <Compile Include="Controllers\ServiziController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -162,6 +163,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\Assets\Img\franco.png" />
+    <Content Include="Content\Assets\Img\identity.png" />
     <Content Include="Content\Assets\Img\ilenia.png" />
     <Content Include="Content\Assets\Img\log.png" />
     <Content Include="Content\Assets\Img\maria.png" />
@@ -259,6 +261,7 @@
     <Content Include="Views\Ordini\Edit.cshtml" />
     <Content Include="Views\Ordini\Index.cshtml" />
     <Content Include="Views\Collaboratori\PublicCollaboratori.cshtml" />
+    <Content Include="Views\Servizi\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
