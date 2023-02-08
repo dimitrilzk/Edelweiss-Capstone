@@ -82,3 +82,7 @@ footer div {
     font-size: 100px;
     color: #3c3431;
 }
+.servlist {
+    list-style-type: square;
+    list-style-position: inside;
+}

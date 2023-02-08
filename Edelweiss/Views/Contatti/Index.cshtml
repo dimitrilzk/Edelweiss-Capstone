@@ -30,6 +30,15 @@
     </tr>
 
 @foreach (var item in Model) {
+    string messaggio = "";
+    if (item.Messaggio.Length > 50)
+    {
+        messaggio = item.Messaggio.Substring(0, 60) + ".....";
+    }
+    else
+    {
+        messaggio = item.Messaggio;
+    }
     <tr>
         <td>
             @Html.DisplayFor(modelItem => item.Nome)
@@ -44,7 +53,7 @@
             @Html.DisplayFor(modelItem => item.Cellulare)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Messaggio)
+            @messaggio
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.IdContatto }) |
