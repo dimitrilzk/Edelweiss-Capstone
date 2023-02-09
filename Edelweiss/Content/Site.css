@@ -86,3 +86,10 @@ footer div {
     list-style-type: square;
     list-style-position: inside;
 }
+.servizio{
+    width: 100%;
+    border-radius: 20px;
+}
+.servizio:hover{
+    transform: scale(1.1);
+}
