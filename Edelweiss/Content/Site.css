@@ -110,3 +110,8 @@ footer div {
     margin-right: auto;
     width: 100%;
 }
+span{
+    text-decoration: underline;
+    font-style: italic;
+    font-weight: 700;
+}
