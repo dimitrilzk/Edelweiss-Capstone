@@ -101,7 +101,7 @@ footer div {
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-    height:400px;
+    height:750px;
     object-fit: cover
 }
 .messaggio {
@@ -109,4 +109,7 @@ footer div {
     margin-left: auto;
     margin-right: auto;
     width: 100%;
+}
+.areacont{
+    background-color: red;
 }
