@@ -119,7 +119,6 @@ span{
     font-weight: 700;
 }
 .txtarea {
-    background-color: #f0e1ca ;
     color: #3c3431;
     padding: 1em;
     border-radius: 10px;
@@ -133,7 +132,6 @@ span{
 }
     .txtarea:hover {
         cursor: pointer;
-        background-color: #fdf4e3;
     }
     .txtarea:focus{
         cursor:text;
