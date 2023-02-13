@@ -51,7 +51,7 @@
 
                 <div class="form-group mx-auto my-3">
                     @Html.LabelFor(model => model.Messaggio, htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-10 d-flex justify-content-center mx-auto">
+                    <div class="col-md-10 d-flex justify-content-center flex-wrap mx-auto">
                         @Html.TextAreaFor(model => model.Messaggio, new  { @class = "form-control txtarea", @rows=5, @columns=40, @placeholder="Scrivi qui il tuo messaggio..." } )
                         @Html.ValidationMessageFor(model => model.Messaggio, "", new { @class = "text-danger" })
                     </div>
