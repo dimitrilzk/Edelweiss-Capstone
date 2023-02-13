@@ -115,3 +115,26 @@ span{
     font-style: italic;
     font-weight: 700;
 }
+.txtarea {
+    background-color: #f0e1ca ;
+    color: #3c3431;
+    padding: 1em;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    outline: none;
+    font-family: 'HP Simplified', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.4;
+    transition: all 0.2s;
+}
+    .txtarea:hover {
+        cursor: pointer;
+        background-color: #fdf4e3;
+    }
+    .txtarea:focus{
+        cursor:text;
+        color: black;
+        background-color: whitesmoke;
+        border-color: black;
+    }
