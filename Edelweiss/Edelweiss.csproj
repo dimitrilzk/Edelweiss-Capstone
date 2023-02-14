@@ -263,7 +263,6 @@
     <Content Include="Views\Ordini\Edit.cshtml" />
     <Content Include="Views\Ordini\Index.cshtml" />
     <Content Include="Views\Collaboratori\PublicCollaboratori.cshtml" />
-    <Content Include="Views\Servizi\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
