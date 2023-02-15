@@ -3,12 +3,26 @@
 @{
     ViewBag.Title = "Details";
 }
+<p class="text-center my-3">
+    @Html.ActionLink("Torna indietro", "Index")
+</p>
 
-<h2>Details</h2>
+<div class="row my-3">
+    <div class="col-lg-6 text-center py-5">
+        <p>Mittente:</p>
+        <h4>@Model.Nome @Model.Cognome</h4>
+        <p>Telefono:</p>
+        <h4>@Model.Cellulare</h4>
+        <p>Email:</p>
+        <h4>@Model.Email</h4>
+    </div>
+    <div class="col-lg-6 text-center">
+        <h2>Messaggio:</h2>
+        <p class="">@Model.Messaggio</p>
+    </div>
+</div>
 
-<div>
-    <h4>Contatti</h4>
-    <hr />
+@*<div>
     <dl class="dl-horizontal">
         <dt>
             @Html.DisplayNameFor(model => model.Nome)
@@ -51,8 +65,5 @@
         </dd>
 
     </dl>
-</div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.IdContatto }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+</div>*@
+

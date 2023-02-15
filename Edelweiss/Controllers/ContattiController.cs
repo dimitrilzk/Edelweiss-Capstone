@@ -52,7 +52,7 @@ namespace Edelweiss.Controllers
             {
                 db.Contatti.Add(contatti);
                 db.SaveChanges();
-                TempData["MessaggioInviato"] = "Il tuo messaggio è stato inviato con successo, riceverai una risposta via Email al più presto, Grazie!";
+                TempData["MessaggioInviato"] = "Il tuo messaggio è stato inviato con successo, riceverai una risposta al più presto, Grazie!";
                 return RedirectToAction("Create");
             }
 

@@ -162,7 +162,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\Assets\Img\contatto.png" />
+    <Content Include="Content\Assets\Img\contatti.png" />
     <Content Include="Content\Assets\Img\franco.png" />
     <Content Include="Content\Assets\Img\ilenia.png" />
     <Content Include="Content\Assets\Img\log.png" />

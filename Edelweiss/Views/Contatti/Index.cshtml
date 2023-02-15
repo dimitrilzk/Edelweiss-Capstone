@@ -3,13 +3,7 @@
 @{
     ViewBag.Title = "Index";
 }
-
-<h2>Index</h2>
-
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
+<table class="table my-5">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Nome)
@@ -56,9 +50,8 @@
             @messaggio
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.IdContatto }) |
-            @Html.ActionLink("Details", "Details", new { id=item.IdContatto }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.IdContatto })
+            @Html.ActionLink("Dettagli", "Details", new { id=item.IdContatto }) |
+            @Html.ActionLink("Elimina", "Delete", new { id=item.IdContatto })
         </td>
     </tr>
 }
