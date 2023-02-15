@@ -37,6 +37,9 @@ footer div {
     flex-direction: column;
     padding-block: 10px;
 }
+.fontcolor {
+    color: #3c3431;
+}
 
 .ebony {
     background-color: #3c3431;
