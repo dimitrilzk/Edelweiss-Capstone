@@ -142,3 +142,35 @@ span{
         background-color: whitesmoke;
         border-color: black;
     }
+#tornaSu {
+    display: inline-block;
+    background-color: #c1c2ad;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border-radius: 4px;
+    margin: 30px;
+    position: fixed;
+    bottom: 50px;
+    right: 15px;
+/*    transition: background-color .3s,opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;*/
+    z-index: 1000;
+}
+    #tornaSu i {
+        font-size: 25px;
+        color: #3c3431;
+    }
+
+    #tornaSu:hover {
+        cursor: pointer;
+        background-color: #a8907d;
+    }
+
+    #tornaSu:active {
+        background-color: #fdf4e3;
+    }
+/*    .show{
+        visibility: visible;
+    }*/

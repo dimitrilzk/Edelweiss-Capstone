@@ -46,6 +46,9 @@
     <div class="container body-content">
         @RenderBody()
     </div>
+
+    <a id="tornaSu"><i class="bi bi-chevron-up"></i></a>
+
     <footer class="container-fluid ebony">
         <div class="d-flex justify-content-between align-content-center">
             <p class="text-white">&copy; @DateTime.Now.Year - Edelweiss</p>
@@ -53,8 +56,30 @@
         </div>
     </footer>
 
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            var btn = $('#tornaSu');
+
+            $(window).scroll(function () {
+                if ($(window).scrollTop() > 300) {
+                    btn.addClass('show');
+                } else {
+                    btn.removeClass('show');
+                }
+            });
+
+            btn.on('click', function (e) {
+                e.preventDefault();
+                $('html, body').animate({ scrollTop: 0 }, '300');
+            });
+
+        });
+
+    </script>
+
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
-    @*pulsante torna su*@ 
 </body>
 </html>
