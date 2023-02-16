@@ -4,12 +4,14 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2 class="text-center my-3">Lista collaboratori</h2>
+<hr />
 
-<p>
-    @Html.ActionLink("Create New", "Create")
+<p class="my-3">
+    <a href="/Collaboratori/Create" class="btn btn-outline-primary">Aggiungi nuovo</a>
 </p>
-<table class="table">
+
+<table class="table table-striped table-hover table-responsive my-4">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Nome)
@@ -53,9 +55,9 @@
             <img src="~/Content/Assets/Img/@Html.DisplayFor(modelItem => item.Foto)" width="40" />
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.IdCollaboratore }) |
-            @Html.ActionLink("Details", "Details", new { id=item.IdCollaboratore }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.IdCollaboratore })
+            @Html.ActionLink("Modifica", "Edit", new { id=item.IdCollaboratore }) |
+            @Html.ActionLink("Dettagli", "Details", new { id=item.IdCollaboratore }) |
+            @Html.ActionLink("Elimina", "Delete", new { id=item.IdCollaboratore })
         </td>
     </tr>
 }

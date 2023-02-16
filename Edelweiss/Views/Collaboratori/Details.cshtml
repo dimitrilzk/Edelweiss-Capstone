@@ -4,63 +4,28 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<h2 class="text-center my-3">Dettagli collaboratore</h2>
+<hr />
 
-<div>
-    <h4>Collaboratori</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Nome)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Nome)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Cognome)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Cognome)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Mansione)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Mansione)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Cellulare)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Cellulare)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Email)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Email)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Foto)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Foto)
-        </dd>
-
-    </dl>
-</div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.IdCollaboratore }) |
-    @Html.ActionLink("Back to List", "Index")
+<p class="my-3">
+    <a href="/Collaboratori/Index" class="btn btn-outline-success">Torna indietro</a>
+    <a href='@Url.Action("Edit", new { id = Model.IdCollaboratore })' class="btn btn-outline-danger">Modifica</a>
 </p>
+
+<div class="row my-3">
+    <div class="col-lg-6 text-center py-5">
+        <p>Nominativo:</p>
+        <h4>@Model.Nome @Model.Cognome</h4>
+        <p>Mansione:</p>
+        <h4>@Model.Mansione</h4>
+        <p>Telefono:</p>
+        <h4>@Model.Cellulare</h4>
+        <p>Email:</p>
+        <h4>@Model.Email</h4>
+    </div>
+    <div class="col-lg-6 text-center">
+        <img src="~/Content/Assets/Img/@Model.Foto" width="450" />
+    </div>
+</div>
+
+

@@ -4,69 +4,35 @@
     ViewBag.Title = "Delete";
 }
 
-<h2>Delete</h2>
+<div class="alert alert-danger my-3">
+    <h3 class="text-center">Sei sicuro di voler elimiare questo collaboratore?</h3>
+</div>
 
-<h3>Are you sure you want to delete this?</h3>
 <div>
-    <h4>Collaboratori</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Nome)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Nome)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Cognome)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Cognome)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Mansione)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Mansione)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Cellulare)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Cellulare)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Email)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Email)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Foto)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Foto)
-        </dd>
-
-    </dl>
-
-    @using (Html.BeginForm()) {
+    @using (Html.BeginForm())
+    {
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+            <input type="submit" value="Cancella" class="btn btn-danger" />
+            <a href="/Collaboratori/Index" class="btn btn-outline-success">Torna indietro</a>
         </div>
     }
 </div>
+
+<div class="row my-3">
+    <div class="col-lg-6 text-center py-5">
+        <p>Nominativo:</p>
+        <h4>@Model.Nome @Model.Cognome</h4>
+        <p>Mansione:</p>
+        <h4>@Model.Mansione</h4>
+        <p>Telefono:</p>
+        <h4>@Model.Cellulare</h4>
+        <p>Email:</p>
+        <h4>@Model.Email</h4>
+    </div>
+    <div class="col-lg-6 text-center">
+        <img src="~/Content/Assets/Img/@Model.Foto" width="450" />
+    </div>
+</div>
+
