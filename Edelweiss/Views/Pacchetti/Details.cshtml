@@ -4,47 +4,25 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<h2 class="text-center my-3">Dettagli pacchetto</h2>
+<hr />
 
-<div>
-    <h4>Pacchetti</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.PrezzoScontato)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.PrezzoScontato)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.PrezzoEffettivo)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.PrezzoEffettivo)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Descrizione)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Descrizione)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Nome)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Nome)
-        </dd>
-
-    </dl>
-</div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.IdPacchetto }) |
-    @Html.ActionLink("Back to List", "Index")
+<p class="my-3">
+    <a href="/Pacchetti/Index" class="btn btn-outline-success">Torna indietro</a>
+    <a href='@Url.Action("Edit", new { id = Model.IdPacchetto })' class="btn btn-outline-danger">Modifica</a>
 </p>
+
+<div class="row my-3">
+    <div class="col-lg-12 text-center py-5">
+        <p>Prezzo scontato:</p>
+        <h4>@Model.PrezzoScontato</h4>
+        <p>Prezzo effettivo:</p>
+        <h4>@Model.PrezzoEffettivo</h4>
+        <p>Descrizione:</p>
+        <h4>@Model.Descrizione</h4>
+        <p>Pacchetto:</p>
+        <h4>@Model.Nome</h4>
+    </div>
+</div>
+
+

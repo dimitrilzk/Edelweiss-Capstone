@@ -4,12 +4,14 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2 class="text-center my-3">Lista Pacchetti</h2>
+<hr />
 
-<p>
-    @Html.ActionLink("Create New", "Create")
+<p class="my-3">
+    <a href="/Pacchetti/Create" class="btn btn-outline-primary">Aggiungi nuovo</a>
 </p>
-<table class="table">
+
+<table class="table table-striped table-hover table-responsive my-4">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.PrezzoScontato)
@@ -26,26 +28,27 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.PrezzoScontato)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PrezzoEffettivo)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Descrizione)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Nome)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.IdPacchetto }) |
-            @Html.ActionLink("Details", "Details", new { id=item.IdPacchetto }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.IdPacchetto })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrezzoScontato)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrezzoEffettivo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descrizione)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.ActionLink("Modifica", "Edit", new { id = item.IdPacchetto }) |
+                @Html.ActionLink("Dettagli", "Details", new { id = item.IdPacchetto }) |
+                @Html.ActionLink("Elimina", "Delete", new { id = item.IdPacchetto })
+            </td>
+        </tr>
+    }
 
 </table>
