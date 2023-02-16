@@ -4,16 +4,10 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h3 class="text-center my-3">Lista pacchetti acquistati</h3>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
+<table class="table table-striped table-hover table-responsive my-4">
     <tr>
-        @*<th>
-            @Html.DisplayNameFor(model => model.Pacchetti.Descrizione)
-        </th>*@
         <th>
             @Html.DisplayNameFor(model => model.Nome)
         </th>
@@ -40,9 +34,6 @@
 
 @foreach (var item in Model) {
     <tr>
-        @*<td>
-            @Html.DisplayFor(modelItem => item.Pacchetti.Descrizione)
-        </td>*@
         <td>
             @Html.DisplayFor(modelItem => item.Nome)
         </td>
@@ -65,9 +56,8 @@
             @Html.DisplayFor(modelItem => item.DataAcquisto)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.IdOrdine }) |
-            @Html.ActionLink("Details", "Details", new { id=item.IdOrdine }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.IdOrdine })
+            @Html.ActionLink("Dettagli", "Details", new { id=item.IdOrdine }) |
+            @Html.ActionLink("Elimina", "Delete", new { id=item.IdOrdine })
         </td>
     </tr>
 }

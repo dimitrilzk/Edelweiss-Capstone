@@ -30,6 +30,7 @@ namespace Edelweiss.Models
 
         [NotMapped()]
         [StringLength(19)]
+        [Display(Name ="Numero Carta")]
         public string NumeroCarta { get; set; }
 
         [NotMapped()]
@@ -38,15 +39,19 @@ namespace Edelweiss.Models
 
         [NotMapped()]
         [StringLength(3)]
+        [Display(Name = "Codice CVV")]
         public string CodiceCVV { get; set; }
 
         public int IdPacchetto { get; set; }
 
         [Column(TypeName = "money")]
+        [Display(Name = "Prezzo")]
         public decimal PrezzoAcquisto { get; set; }
 
         [StringLength(50)]
+        [Display(Name = "Pacchetto")]
         public string NomePacchetto { get; set; }
+        [Display(Name = "Data d'acquisto")]
         public DateTime DataAcquisto { get; set; }
 
         public virtual Pacchetti Pacchetti { get; set; }
