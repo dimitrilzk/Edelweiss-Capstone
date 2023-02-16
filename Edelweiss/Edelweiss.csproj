@@ -136,6 +136,7 @@
     <Compile Include="Controllers\OrdiniController.cs" />
     <Compile Include="Controllers\PacchettiController.cs" />
     <Compile Include="Controllers\ServiziController.cs" />
+    <Compile Include="Controllers\UtentiController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -263,6 +264,7 @@
     <Content Include="Views\Ordini\Edit.cshtml" />
     <Content Include="Views\Ordini\Index.cshtml" />
     <Content Include="Views\Collaboratori\PublicCollaboratori.cshtml" />
+    <Content Include="Views\Utenti\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

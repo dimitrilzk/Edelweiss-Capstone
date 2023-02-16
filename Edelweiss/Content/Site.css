@@ -174,3 +174,7 @@ span{
 /*    .show{
         visibility: visible;
     }*/
+.loginBorder {
+    border: 7px solid #3c3431;
+    border-radius: 20px;
+}

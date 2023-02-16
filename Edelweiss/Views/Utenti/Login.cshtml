@@ -1,0 +1,40 @@
+﻿@model Edelweiss.Models.Utenti
+
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2 class="text-center my-5">Effettua il login per accedera all'area riservata</h2>
+<hr />
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal mx-auto w-50 text-center loginBorder my-5 p-4">
+        <img class="" src="~/Content/Assets/Img/ilenia.png" style="width:100px" />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group mx-auto my-3">
+            @Html.LabelFor(model => model.Username, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10 mx-auto">
+                @Html.EditorFor(model => model.Username, new { htmlAttributes = new { @class = "form-control mx-auto w-50" } })
+                @Html.ValidationMessageFor(model => model.Username, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.PasswordUtente, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10 mx-auto">
+                @Html.EditorFor(model => model.PasswordUtente, new { htmlAttributes = new { @class = "form-control mx-auto w-50" } })
+                @Html.ValidationMessageFor(model => model.PasswordUtente, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+
+        <div class="form-group text-center">
+            <div class="col-md-offset-2 col-md-10 mx-auto">
+                <input type="submit" value="LOGIN" class="btn btn-success mt-4 w-25" />
+            </div>
+        </div>
+    </div>
+}

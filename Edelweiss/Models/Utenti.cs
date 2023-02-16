@@ -18,6 +18,7 @@ namespace Edelweiss.Models
 
         [Required]
         [StringLength(50)]
+        [Display(Name = "Password")]
         public string PasswordUtente { get; set; }
 
         [Required]
