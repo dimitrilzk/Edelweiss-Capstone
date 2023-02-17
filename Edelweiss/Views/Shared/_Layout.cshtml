@@ -39,6 +39,12 @@
                     <li class="nav-item" id="carrelloLink">
                         <a class="nav-link" href="/Ordini/Create"><i class="bi bi-cart-plus"></i></a>
                     </li>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li class="nav-item" id="carrelloLink">
+                            <a class="nav-link" href="/Utenti/Logout">Logout</a>
+                        </li>
+                    }
                 </ul>
             </div>
         </div>

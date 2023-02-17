@@ -8,6 +8,7 @@ namespace Edelweiss.Controllers
 {
     public class AreaRiservataController : Controller
     {
+        [Authorize]
         // GET: AreaRiservata
         public ActionResult Index()
         {

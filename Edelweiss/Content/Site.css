@@ -153,9 +153,8 @@ span{
     position: fixed;
     bottom: 70px;
     right: 0px;
-    /*    transition: background-color .3s,opacity .5s, visibility .5s;
-    opacity: 0;
-    visibility: hidden;*/
+    transition: background-color .3s,opacity .5s, visibility .5s;
+    visibility: hidden;
     z-index: 1000;
 }
     #tornaSu i {
@@ -171,9 +170,9 @@ span{
     #tornaSu:active {
         background-color: #fdf4e3;
     }
-/*    .show{
-        visibility: visible;
-    }*/
+    .show{
+        visibility: visible !important;
+    }
 .loginBorder {
     border: 7px solid #3c3431;
     border-radius: 20px;
