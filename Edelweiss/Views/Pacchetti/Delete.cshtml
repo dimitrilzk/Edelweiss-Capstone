@@ -20,15 +20,47 @@
     }
 </div>
 
-<div class="row my-3">
-    <div class="col-lg-12 text-center py-5">
-        <p>Prezzo scontato:</p>
-        <h4> @Model.PrezzoScontato</h4>
-        <p>Prezzo effettivo:</p>
-        <h4>@Model.PrezzoEffettivo</h4>
-        <p>Descrizione:</p>
-        <h4>@Model.Descrizione</h4>
-        <p>Pacchetto:</p>
-        <h4>@Model.Nome</h4>
+<div class="row my-3 loginBorder">
+    <div class="col-lg-6 text-center  my-auto py-5">
+        <h4>Prezzo scontato:</h4>
+        <p>@Convert.ToDecimal(@Model.PrezzoScontato).ToString("c2")</p>
+        <h4>Prezzo effettivo:</h4>
+        <p>@Convert.ToDecimal(@Model.PrezzoEffettivo).ToString("c2")</p>
+        <h4>Descrizione:</h4>
+        <p>@Model.Descrizione</p>
+        <h4>Pacchetto:</h4>
+        <p>@Model.Nome</p>
+    </div>
+    <div class="col-lg-6 text-center  py-5">
+        @if (Model.Dettaglio1 != null)
+        {
+            <h4>Dettaglio 1:</h4>
+            <p>@Model.Dettaglio1</p>
+        }
+        @if (Model.Dettaglio2 != null)
+        {
+            <h4>Dettaglio 2:</h4>
+            <p>@Model.Dettaglio2</p>
+        }
+        @if (Model.Dettaglio3 != null)
+        {
+            <h4>Dettaglio 3:</h4>
+            <p>@Model.Dettaglio3</p>
+        }
+        @if (Model.Dettaglio4 != null)
+        {
+            <h4>Dettaglio 4:</h4>
+            <p>@Model.Dettaglio4</p>
+        }
+        @if (Model.Dettaglio5 != null)
+        {
+            <h4>Dettaglio 5:</h4>
+            <p>@Model.Dettaglio5</p>
+        }
+        @if (Model.Dettaglio6 != null)
+        {
+            <h4>Dettaglio 6:</h4>
+            <p>@Model.Dettaglio6</p>
+        }
     </div>
 </div>

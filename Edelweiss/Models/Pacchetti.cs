@@ -20,10 +20,12 @@ namespace Edelweiss.Models
 
         [Column(TypeName = "money")]
         [Display(Name = "Prezzo Scontato")]
+        [DataType(DataType.Currency)]
         public decimal? PrezzoScontato { get; set; }
 
         [Column(TypeName = "money")]
         [Display(Name = "Prezzo Effettivo")]
+        [DataType(DataType.Currency)]
         public decimal PrezzoEffettivo { get; set; }
 
         [Required]
