@@ -3,15 +3,18 @@
 @{
     ViewBag.Title = "Create";
 }
+<h2>Conferma il tuo acquisto</h2>
+<hr />
+
 @if (TempData["riepilogo"] != null)
 {
     <p class="text-center mt-3 alert alert-success">@TempData["riepilogo"]</p>
 }
+
 @if(ViewBag.errore != null)
             {
                 <p class="text-center mt-3 alert alert-danger">@ViewBag.errore</p>
             }
-<h2>Conferma il tuo acquisto</h2>
 
 
 @using (Html.BeginForm())
@@ -19,8 +22,7 @@
     @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
-        <h4>Ordini</h4>
-        <hr />
+
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
             @Html.LabelFor(model => model.Nome, htmlAttributes: new { @class = "control-label col-md-2" })

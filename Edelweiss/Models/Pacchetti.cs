@@ -19,9 +19,11 @@ namespace Edelweiss.Models
         public int IdPacchetto { get; set; }
 
         [Column(TypeName = "money")]
+        [Display(Name = "Prezzo Scontato")]
         public decimal? PrezzoScontato { get; set; }
 
         [Column(TypeName = "money")]
+        [Display(Name = "Prezzo Effettivo")]
         public decimal PrezzoEffettivo { get; set; }
 
         [Required]
@@ -30,6 +32,18 @@ namespace Edelweiss.Models
         [Required]
         [StringLength(50)]
         public string Nome { get; set; }
+        [Display(Name ="Dettaglio 1")]
+        public string Dettaglio1 { get; set; }
+        [Display(Name = "Dettaglio 2")]
+        public string Dettaglio2 { get; set; }
+        [Display(Name = "Dettaglio 3")]
+        public string Dettaglio3 { get; set; }
+        [Display(Name = "Dettaglio 4")]
+        public string Dettaglio4 { get; set; }
+        [Display(Name = "Dettaglio 5")]
+        public string Dettaglio5 { get; set; }
+        [Display(Name = "Dettaglio 6")]
+        public string Dettaglio6 { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Ordini> Ordini { get; set; }

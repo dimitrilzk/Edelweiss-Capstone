@@ -63,7 +63,8 @@ namespace Edelweiss.Controllers
         // Per altri dettagli, vedere https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "IdPacchetto,PrezzoScontato,PrezzoEffettivo,Descrizione,Nome")] Pacchetti pacchetti)
+        public ActionResult Create([Bind(Include = "IdPacchetto,PrezzoScontato,PrezzoEffettivo,Descrizione," +
+            "Nome,Dettaglio1,Dettaglio2,Dettaglio3,Dettaglio4,Dettaglio5,Dettaglio6")] Pacchetti pacchetti)
         {
             if (ModelState.IsValid)
             {
@@ -95,7 +96,8 @@ namespace Edelweiss.Controllers
         // Per altri dettagli, vedere https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "IdPacchetto,PrezzoScontato,PrezzoEffettivo,Descrizione,Nome")] Pacchetti pacchetti)
+        public ActionResult Edit([Bind(Include = "IdPacchetto,PrezzoScontato,PrezzoEffettivo,Descrizione," +
+            "Nome,Dettaglio1,Dettaglio2,Dettaglio3,Dettaglio4,Dettaglio5,Dettaglio6")] Pacchetti pacchetti)
         {
             if (ModelState.IsValid)
             {

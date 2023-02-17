@@ -135,7 +135,6 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\OrdiniController.cs" />
     <Compile Include="Controllers\PacchettiController.cs" />
-    <Compile Include="Controllers\ServiziController.cs" />
     <Compile Include="Controllers\UtentiController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -151,6 +150,14 @@
     <Compile Include="Migrations\202302020847016_NotMappedCartaOrdini.cs" />
     <Compile Include="Migrations\202302020847016_NotMappedCartaOrdini.designer.cs">
       <DependentUpon>202302020847016_NotMappedCartaOrdini.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302171028392_AddObiettivi.cs" />
+    <Compile Include="Migrations\202302171028392_AddObiettivi.designer.cs">
+      <DependentUpon>202302171028392_AddObiettivi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302171220558_AddDettagli.cs" />
+    <Compile Include="Migrations\202302171220558_AddDettagli.designer.cs">
+      <DependentUpon>202302171220558_AddDettagli.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Collaboratori.cs" />
@@ -283,6 +290,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202302020847016_NotMappedCartaOrdini.resx">
       <DependentUpon>202302020847016_NotMappedCartaOrdini.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302171028392_AddObiettivi.resx">
+      <DependentUpon>202302171028392_AddObiettivi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302171220558_AddDettagli.resx">
+      <DependentUpon>202302171220558_AddDettagli.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
