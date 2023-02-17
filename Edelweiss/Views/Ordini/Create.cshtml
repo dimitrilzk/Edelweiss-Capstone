@@ -3,94 +3,103 @@
 @{
     ViewBag.Title = "Create";
 }
-<h2>Conferma il tuo acquisto</h2>
+<h2 class="text-center my-3">Conferma il tuo acquisto</h2>
 <hr />
 
-@if (TempData["riepilogo"] != null)
-{
-    <p class="text-center mt-3 alert alert-success">@TempData["riepilogo"]</p>
-}
+<div class="row">
+    <div class="col-lg-6">
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
 
-@if(ViewBag.errore != null)
-            {
-                <p class="text-center mt-3 alert alert-danger">@ViewBag.errore</p>
-            }
+            <div class="form-horizontal text-center">
 
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group my-1">
+                    @Html.LabelFor(model => model.Nome, htmlAttributes: new { @class = "control-label col-md-12" })
+                    <div class="col-md-12">
+                        @Html.EditorFor(model => model.Nome, new { htmlAttributes = new { @class = "form-control mx-auto" } })
+                        @Html.ValidationMessageFor(model => model.Nome, "", new { @class = "text-danger" })
+                    </div>
+                </div>
 
-@using (Html.BeginForm())
-{
-    @Html.AntiForgeryToken()
+                <div class="form-group my-1">
+                    @Html.LabelFor(model => model.Cognome, htmlAttributes: new { @class = "control-label col-md-12" })
+                    <div class="col-md-12">
+                        @Html.EditorFor(model => model.Cognome, new { htmlAttributes = new { @class = "form-control mx-auto" } })
+                        @Html.ValidationMessageFor(model => model.Cognome, "", new { @class = "text-danger" })
+                    </div>
+                </div>
 
-    <div class="form-horizontal">
+                <div class="form-group my-1">
+                    @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-12" })
+                    <div class="col-md-12">
+                        @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control mx-auto" } })
+                        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                    </div>
+                </div>
 
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="form-group">
-            @Html.LabelFor(model => model.Nome, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Nome, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Nome, "", new { @class = "text-danger" })
+                <div class="form-group my-1">
+                    @Html.LabelFor(model => model.Cellulare, htmlAttributes: new { @class = "control-label col-md-12" })
+                    <div class="col-md-12">
+                        @Html.EditorFor(model => model.Cellulare, new { htmlAttributes = new { @class = "form-control mx-auto" } })
+                        @Html.ValidationMessageFor(model => model.Cellulare, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group my-1">
+                    @Html.LabelFor(model => model.NumeroCarta, htmlAttributes: new { @class = "control-label col-md-12" })
+                    <div class="col-md-12">
+                        @Html.EditorFor(model => model.NumeroCarta, new { htmlAttributes = new { @class = "form-control mx-auto" } })
+                        @Html.ValidationMessageFor(model => model.NumeroCarta, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group my-1">
+                    @Html.LabelFor(model => model.Scadenza, htmlAttributes: new { @class = "control-label col-md-12" })
+                    <div class="col-md-12">
+                        @Html.EditorFor(model => model.Scadenza, new { htmlAttributes = new { @class = "form-control mx-auto" } })
+                        @Html.ValidationMessageFor(model => model.Scadenza, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group my-1">
+                    @Html.LabelFor(model => model.CodiceCVV, htmlAttributes: new { @class = "control-label col-md-12" })
+                    <div class="col-md-12">
+                        @Html.EditorFor(model => model.CodiceCVV, new { htmlAttributes = new { @class = "form-control mx-auto" } })
+                        @Html.ValidationMessageFor(model => model.CodiceCVV, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-12 my-3">
+                        <input type="submit" value="Acquista" class="btn btn-success form-control" />
+                    </div>
+                </div>
             </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Cognome, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Cognome, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Cognome, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Cellulare, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Cellulare, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Cellulare, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.NumeroCarta, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.NumeroCarta, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.NumeroCarta, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Scadenza, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Scadenza, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Scadenza, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.CodiceCVV, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.CodiceCVV, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.CodiceCVV, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
-            </div>
-        </div>
+        }
     </div>
-}
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
+
+    <div class="col-lg-6">
+        @if (TempData["successo"] != null)
+        {
+            <p class="text-center mt-3 alert alert-success">@TempData["successo"]</p>
+        }
+
+        @if (ViewBag.errore != null)
+        {
+            <p class="text-center mt-3 alert alert-danger">@ViewBag.errore</p>
+        }
+        @if (TempData["riepilogo"] != null)
+        {
+            <p class="text-center mt-3 loginBorder p-5">@TempData["riepilogo"]</p>
+        }
+    </div>
+
 </div>
+
+
 <script type="text/javascript">
     $(document).ready(function () {
         $("#carrelloLink").addClass("currentnavli");

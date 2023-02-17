@@ -70,13 +70,12 @@ namespace Edelweiss.Controllers
                     db.Ordini.Add(ordini);
                     db.SaveChanges();
                     PacchettoAcquistato.ListaPacchetti.Clear();
-                    return RedirectToAction("Index");
+                    TempData["successo"] = "Il tuo acquisto è stato effettuato, riceverai il piano e la ricevuta via Email, a presto e grazie!";
+                    return RedirectToAction("Create");
                 }
                 
             }
-
-            ViewBag.IdPacchetto = new SelectList(db.Pacchetti, "IdPacchetto", "Nome", ordini.IdPacchetto);
-            return View(ordini);
+            return View();
         }
 
         // GET: Ordini/Edit/5

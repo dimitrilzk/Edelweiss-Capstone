@@ -5,12 +5,13 @@ using System.Web;
 
 namespace Edelweiss.Models
 {
-    public  class PacchettoAcquistato
+    public class PacchettoAcquistato
     {
-        public  int IdPacchetto;
-        public  string Nome;
-        public  decimal Prezzo;
-        public  DateTime DataAcquisto;
+        public int IdPacchetto;
+        public string Nome;
+        public decimal Prezzo;
+        public DateTime DataAcquisto;
+
         public static List<PacchettoAcquistato> ListaPacchetti = new List<PacchettoAcquistato>();
     }
 }
