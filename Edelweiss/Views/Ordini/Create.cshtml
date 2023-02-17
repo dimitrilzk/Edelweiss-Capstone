@@ -91,10 +91,39 @@
         {
             <p class="text-center mt-3 alert alert-danger">@ViewBag.errore</p>
         }
-        @if (TempData["riepilogo"] != null)
-        {
-            <p class="text-center mt-3 loginBorder p-5">@TempData["riepilogo"]</p>
-        }
+        @foreach(var item in Edelweiss.Models.PacchettoAcquistato.ListaPacchetti)
+            {
+            <div class="text-center mt-3 loginBorder p-1">
+                <h4>Stai acquistando:</h4>
+                <p>Pacchetto: <span>@item.Nome</span></p>
+                <p>Prezzo: <span>@Convert.ToDecimal(item.Prezzo).ToString("c2")</span></p>
+                <p>Dettagli pacchetto:</p>
+                @if (item.Dettaglio1 != null)
+                {
+                    <p><span>@item.Dettaglio1</span></p>
+                }
+                @if (item.Dettaglio2 != null)
+                {
+                    <p><span>@item.Dettaglio2</span></p>
+                }
+                @if (item.Dettaglio3 != null)
+                {
+                    <p><span>@item.Dettaglio3</span></p>
+                }
+                @if (item.Dettaglio4 != null)
+                {
+                    <p><span>@item.Dettaglio4</span></p>
+                }
+                @if (item.Dettaglio5 != null)
+                {
+                    <p><span>@item.Dettaglio5</span></p>
+                }
+                @if (item.Dettaglio6 != null)
+                {
+                    <p><span>@item.Dettaglio6</span></p>
+                }
+            </div>
+            }
     </div>
 
 </div>
