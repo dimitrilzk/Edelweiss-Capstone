@@ -218,7 +218,7 @@ p, h3, h4, h5, li {
     border: 3px solid black;
     border-radius: 20px;
     text-decoration: none;
-    padding-block: 10px;
+    padding-block: 6px;
     padding-inline: 40px;
 }
     .bttndett:hover {

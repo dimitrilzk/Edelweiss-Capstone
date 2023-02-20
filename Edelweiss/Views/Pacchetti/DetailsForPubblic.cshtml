@@ -1,0 +1,72 @@
+﻿@model Edelweiss.Models.Pacchetti
+
+@{
+    ViewBag.Title = "DetailsForPubblic";
+}
+
+@*<h2 class="text-center my-3">Dettagli pacchetto</h2>*@
+
+
+<div class="row my-3">
+
+        <div class="col-lg-6  d-flex justify-content-center my-3">
+            <div class="card pack packs" style="width: 20rem; ">
+                <div class="card-body my-3">
+                    <h5 class="card-subtitle my-2 me-4 text-decoration-line-through text-end pacchettodesc">@Convert.ToDecimal(@Model.PrezzoScontato).ToString("c0")</h5>
+                    <h2 class="card-text text-end text-center pacchettonumb">@Convert.ToDecimal(@Model.PrezzoEffettivo).ToString("c0")</h2>
+                    <p class="card-text text-end me-4 pacchettodesc">@Model.Descrizione</p>
+                    <h1 class="card-title text-center text-uppercase my-4 pacchettonumb">@Model.Nome</h1>
+                    <p class="d-flex justify-content-center">
+                        <a href='@Url.Action("AggiungiCarrello", new { id = Model.IdPacchetto })' class="btn fs-1 pacchettodesc"><i class="bi bi-cart-plus"></i></a>
+                    </p>
+                    <p class="d-flex justify-content-center">
+                        <a class="bttndett">Dettagli</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    <div class="col-lg-6 text-center  py-5">
+        @if (Model.Dettaglio1 != null)
+        {
+            <h4>Dettaglio 1:</h4>
+            <p>@Model.Dettaglio1</p>
+        }
+        @if (Model.Dettaglio2 != null)
+        {
+            <h4>Dettaglio 2:</h4>
+            <p>@Model.Dettaglio2</p>
+        }
+        @if (Model.Dettaglio3 != null)
+        {
+            <h4>Dettaglio 3:</h4>
+            <p>@Model.Dettaglio3</p>
+        }
+        @if (Model.Dettaglio4 != null)
+        {
+            <h4>Dettaglio 4:</h4>
+            <p>@Model.Dettaglio4</p>
+        }
+        @if (Model.Dettaglio5 != null)
+        {
+            <h4>Dettaglio 5:</h4>
+            <p>@Model.Dettaglio5</p>
+        }
+        @if (Model.Dettaglio6 != null)
+        {
+            <h4>Dettaglio 6:</h4>
+            <p>@Model.Dettaglio6</p>
+        }
+    </div>
+</div>
+
+<script>
+    $("body").find(".pack").eq(0).addClass("ebony");
+    $("body").find(".pack").eq(1).addClass("sage");
+    $("body").find(".pack").eq(2).addClass("khaki");
+</script>
+
+@*<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IdPacchetto }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>*@

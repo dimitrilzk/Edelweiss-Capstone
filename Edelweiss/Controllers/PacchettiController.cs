@@ -14,8 +14,22 @@ namespace Edelweiss.Controllers
     {
         private ModelDbContext db = new ModelDbContext();
 
+        public ActionResult DetailsForPubblic(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Pacchetti pacchetti = db.Pacchetti.Find(id);
+            if (pacchetti == null)
+            {
+                return HttpNotFound();
+            }
+            return View(pacchetti);
+        }
         public ActionResult AggiungiCarrello(int id)
         {
+            PacchettoAcquistato.ListaPacchetti.Clear();
             PacchettoAcquistato p1 = new PacchettoAcquistato();
             p1.IdPacchetto = id;
             p1.Nome = db.Pacchetti.Find(id).Nome;
