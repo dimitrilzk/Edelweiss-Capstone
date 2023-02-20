@@ -210,3 +210,17 @@ p, h3, h4, h5, li {
     border: none;
     box-shadow: -5px 5px 30px 0px #000000;
 }
+.bttndett {
+    font-family: 'Bebas Neue', cursive;
+    color: #3c3431;
+    font-size: 1.5rem;
+    background-color: #f0e1ca;
+    border: 1px solid black;
+    border-radius: 20px;
+    text-decoration: none;
+    padding-block: 10px;
+    padding-inline: 40px;
+}
+    .bttndett:hover {
+        color: #3c3431;
+    }
