@@ -224,3 +224,6 @@ p, h3, h4, h5, li {
     .bttndett:hover {
         color: #3c3431;
     }
+.detailsico {
+    border-radius:6px;
+}
