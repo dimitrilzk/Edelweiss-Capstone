@@ -6,9 +6,9 @@ using System.Web.Mvc;
 
 namespace Edelweiss.Controllers
 {
+    [Authorize]
     public class AreaRiservataController : Controller
     {
-        //[Authorize]
         // GET: AreaRiservata
         public ActionResult Index()
         {

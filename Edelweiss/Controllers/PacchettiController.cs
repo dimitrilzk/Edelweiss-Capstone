@@ -10,10 +10,11 @@ using Edelweiss.Models;
 
 namespace Edelweiss.Controllers
 {
+    [Authorize]
     public class PacchettiController : Controller
     {
         private ModelDbContext db = new ModelDbContext();
-
+        [AllowAnonymous]
         public ActionResult DetailsForPubblic(int? id)
         {
             if (id == null)
@@ -27,6 +28,7 @@ namespace Edelweiss.Controllers
             }
             return View(pacchetti);
         }
+        [AllowAnonymous]
         public ActionResult AggiungiCarrello(int id)
         {
             PacchettoAcquistato.ListaPacchetti.Clear();
@@ -44,6 +46,7 @@ namespace Edelweiss.Controllers
             PacchettoAcquistato.ListaPacchetti.Add(p1);
             return RedirectToAction("Create", "Ordini");
         }
+        [AllowAnonymous]
         public ActionResult PacchettiPublic()
         {
             return View(db.Pacchetti.ToList());

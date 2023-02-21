@@ -10,10 +10,11 @@ using Edelweiss.Models;
 
 namespace Edelweiss.Controllers
 {
+    [Authorize]
     public class CollaboratoriController : Controller
     {
         private ModelDbContext db = new ModelDbContext();
-
+        [AllowAnonymous]
         public ActionResult PublicCollaboratori()
         {
             return View(db.Collaboratori.ToList());

@@ -10,6 +10,7 @@ using Edelweiss.Models;
 
 namespace Edelweiss.Controllers
 {
+    [Authorize]
     public class OrdiniController : Controller
     {
         private ModelDbContext db = new ModelDbContext();
@@ -39,6 +40,7 @@ namespace Edelweiss.Controllers
         }
 
         // GET: Ordini/Create
+        [AllowAnonymous]
         public ActionResult Create()
         {
             //var idPacchetto = PacchettoAcquistato.ListaPacchetti[0].IdPacchetto;
@@ -52,6 +54,7 @@ namespace Edelweiss.Controllers
         // Per altri dettagli, vedere https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [AllowAnonymous]
         public ActionResult Create([Bind(Include = "IdOrdine,Nome,Cognome,Email,Cellulare,NumeroCarta,Scadenza,CodiceCVV,IdPacchetto")] Ordini ordini)
         {
             if (ModelState.IsValid)

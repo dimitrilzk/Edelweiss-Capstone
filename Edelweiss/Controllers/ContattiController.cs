@@ -10,6 +10,7 @@ using Edelweiss.Models;
 
 namespace Edelweiss.Controllers
 {
+    [Authorize]
     public class ContattiController : Controller
     {
         private ModelDbContext db = new ModelDbContext();
@@ -36,6 +37,7 @@ namespace Edelweiss.Controllers
         }
 
         // GET: Contatti/Create
+        [AllowAnonymous]
         public ActionResult Create()
         {
             return View();
@@ -46,6 +48,7 @@ namespace Edelweiss.Controllers
         // Per altri dettagli, vedere https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [AllowAnonymous]
         public ActionResult Create([Bind(Include = "IdContatto,Nome,Cognome,Email,Cellulare,Messaggio")] Contatti contatti)
         {
             if (ModelState.IsValid)
