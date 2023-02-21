@@ -230,3 +230,6 @@ p, h3, h4, h5, li {
 .dettborder {
     box-shadow: 10px 10px 10px 0px #000000;
 }
+.navbar-nav i{
+    font-size: 30px
+}
