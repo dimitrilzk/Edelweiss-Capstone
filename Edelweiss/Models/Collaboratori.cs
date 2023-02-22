@@ -36,6 +36,7 @@ namespace Edelweiss.Models
         [StringLength(50)]
         public string Foto { get; set; }
         [NotMapped()]
+        [Display(Name ="File Foto")]
         public HttpPostedFileBase FileFoto { get; set; }
     }
 }
